@@ -13,14 +13,17 @@ body {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: 0 auto;
+  min-block-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1919;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
   font-size: 18px;
-  background-color: #1b1919;
-  padding: 133px 30px;
+  line-height: 1;
+  letter-spacing: 0%;
 }
 
 h1,
@@ -53,8 +56,8 @@ ol {
 }
 
 .content {
-  inline-size: 1140px;
-  block-size: 534px;
+  inline-size: 100%;
+  max-inline-size: 1140px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -82,20 +85,11 @@ ol {
 }
 
 .search-form__fieldset {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
   border: none;
 }
 
 .search-form__fieldset-title {
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
+  font: inherit;
   margin-bottom: 5px;
 }
 
@@ -112,17 +106,13 @@ ol {
   outline-offset: 1px;
 }
 
-input {
+.search-form__textfield {
   appearance: none;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
+  font: inherit;
   inline-size: 225px;
   block-size: 27px;
   border-inline: none;
-  border-block: 1px solid #fff;
+  border-block: 1px solid currentColor;
   background-color: transparent;
   padding: 0;
   color: #fff;
@@ -177,14 +167,10 @@ input {
 
 .button {
   appearance: none;
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  font: inherit;
   text-align: center;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   background-color: transparent;
   padding: 6px 0px;
   cursor: pointer;
@@ -217,20 +203,21 @@ input {
 
 .content__details {
   inline-size: 399px;
-  block-size: 534px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.title {
+.title,
+.content__video-card-title {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
   font-size: 75px;
   line-height: 94%;
-  letter-spacing: 0%;
-  text-transform: uppercase;
-  color: #fff;
   margin-bottom: 26px;
 }
 
@@ -240,8 +227,9 @@ input {
 
 .content__list {
   position: relative;
-  block-size: 300px;
-  overflow: hidden auto;
+  min-block-size: 300px;
+  max-block-size: 300px;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -251,7 +239,6 @@ input {
   display: flex;
   flex-direction: column;
   inline-size: 398px;
-  block-size: 107px;
 }
 
 li:has(button) {
@@ -262,7 +249,6 @@ li:has(button) {
   display: block;
   text-decoration: none;
   color: #fff;
-  padding: 2px;
   margin: 2px;
   outline: none;
 }
@@ -301,34 +287,26 @@ li:has(button) {
 }
 
 .content__video-card-title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
   font-size: 30px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  text-transform: uppercase;
   inline-size: 200px;
-  padding: 0 4px 0 0;
-  margin: 0 0 6px 0;
+  padding: 2px;
+  margin-bottom: 2px;
   hyphens: auto;
   overflow-wrap: break-word;
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
   line-height: 16.2px;
-  letter-spacing: 0%;
   inline-size: 200px;
-  padding: 0 4px 0 0;
+  padding: 2px;
 }
 
 .content__video-card-thumbnail {
   inline-size: 194px;
-  block-size: 103px;
+  block-size: 107px;
   object-fit: cover;
   object-position: center;
+  padding: 2px;
 }
 
 .more-button {
