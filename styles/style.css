@@ -168,6 +168,7 @@ ol {
 .button {
   appearance: none;
   font: inherit;
+  font-weight: 700;
   text-align: center;
   color: #fff;
   border: 1px solid currentColor;
@@ -229,7 +230,7 @@ ol {
   position: relative;
   min-block-size: 300px;
   max-block-size: 300px;
-  overflow: auto;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -238,7 +239,8 @@ ol {
 .content__list-item {
   display: flex;
   flex-direction: column;
-  inline-size: 398px;
+  inline-size: 100%;
+  padding: 2px;
 }
 
 li:has(button) {
@@ -249,7 +251,6 @@ li:has(button) {
   display: block;
   text-decoration: none;
   color: #fff;
-  margin: 2px;
   outline: none;
 }
 
