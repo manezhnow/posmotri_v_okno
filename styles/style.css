@@ -228,8 +228,7 @@ ol {
 
 .content__list {
   position: relative;
-  min-block-size: 300px;
-  max-block-size: 300px;
+  block-size: 300px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -239,7 +238,6 @@ ol {
 .content__list-item {
   display: flex;
   flex-direction: column;
-  inline-size: 100%;
   padding: 2px;
 }
 
@@ -289,7 +287,6 @@ li:has(button) {
 
 .content__video-card-title {
   font-size: 30px;
-  inline-size: 200px;
   padding: 2px;
   margin-bottom: 2px;
   hyphens: auto;
@@ -298,12 +295,12 @@ li:has(button) {
 
 .content__video-card-description {
   line-height: 16.2px;
-  inline-size: 200px;
   padding: 2px;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 .content__video-card-thumbnail {
-  inline-size: 194px;
   block-size: 107px;
   object-fit: cover;
   object-position: center;
